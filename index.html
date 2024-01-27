@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sketchfab Configurator</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <div class="app">
+        <iframe src="" id="api-frame" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="vr" width="640"
+            height="400"></iframe>
+        <div class="options"></div>
+    </div>
+</body>
+
+<script type="text/javascript" src="https://static.sketchfab.com/api/sketchfab-viewer-1.3.2.js"></script>
+<script type="text/javascript" src="./SketchfabConfigurator-1.0.6.js"></script>
+<script type="text/javascript">
+    var config = {
+    "model": "0d1229f8aa104445890d73a04b251aa3",
+    "params": {
+        "camera": 0,
+        "preload": 1,
+        "ui_controls": 0,
+        "ui_infos": 0,
+        "ui_watermark": 0
+    },
+    "config": [
+        {
+            "name": "LAYOUT",
+            "material": "carenagem",
+            "channels": [
+                "AlbedoPBR"
+            ],
+            "type": "texture",
+            "options": [
+                {
+                    "name": "ALCEU FELDMANN",
+                    "url": "https://static.wixstatic.com/media/ebc5fb_bc75d16c56dc4bbebf41a74456058052~mv2.jpg"
+                },
+                {
+                    "name": "CHICO HORTA",
+                    "url": "https://static.wixstatic.com/media/ebc5fb_3f2f15448d524dc2865c4583abc1eaa0~mv2.jpg"
+                },
+                {
+                    "name": "NICOLAS COSTA",
+                    "url": "https://static.wixstatic.com/media/ebc5fb_29f3ea8cc1d145538eafab7a571b861c~mv2.jpg"
+                },
+                {
+                    "name": "RODRIGO MELLO",
+                    "url": "https://static.wixstatic.com/media/ebc5fb_fa0ed936b0ad451ab6075e7431af9fa7~mv2.jpg"
+                },
+                {
+                    "name": "WERNER NEUGEBAUER",
+                    "url": "https://static.wixstatic.com/media/ebc5fb_b4fa295711694960ab6c57e4aa26dc5d~mv2.jpg"
+                }
+            ],
+            "default": 0
+        }
+    ]
+};
+    var iframeEl = document.getElementById('api-frame');
+    var optionsEl = document.querySelector('.options');
+    var configurator = new SketchfabConfigurator.Configurator(iframeEl, optionsEl, config);
+</script>
+
+</html>
